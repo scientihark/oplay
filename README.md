@@ -42,7 +42,7 @@ So,the code is a mess，Please exhibitions。
 <h1>开源信息：</h1>
 
 <h2>主源码站：</h2>
-<h3>https://github.com/scientihark/oplay （GIT）</h3>
+<h3>https://scientihark.github.com/oplay （GIT）</h3>
 <h2>Google Code镜像：</h2>
 <h3>https://code.google.com/p/oplay-scientihark/ （SVN）</h3>
 =======================================================================
@@ -50,7 +50,7 @@ So,the code is a mess，Please exhibitions。
 <h1>Opensource Information：</h1>
 
 <h2>main source：</h2>
-<h3>https://github.com/scientihark/oplay （GIT）</h3>
+<h3>https://scientihark.github.com/oplay （GIT）</h3>
 <h2>Google Code mirror：</h2>
 <h3>https://code.google.com/p/oplay-scientihark/ （SVN）</h3>
 =======================================================================
