@@ -1,5 +1,5 @@
-﻿$version="Pre Alpha v0.1d";
-$version_b="Build 2012072101";
+$version="Pre Alpha v0.1d";
+$version_b="Build 2012071865";
 $nowplay=0;
 $now_lst_page=1;
 $total_lst_page=1;

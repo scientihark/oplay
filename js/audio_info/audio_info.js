@@ -12,6 +12,9 @@ var $audio_info={"version":"NULL","artist":"NULL","title":"NULL","album":"NULL",
 //read_audio_info();
 function get_mediainfo(){
 		var audio_tags = ID3.getAllTags($audio_file);
+		if(!audio_tags){
+			return;
+		}
 		//version
 		if(audio_tags.version){
 			$audio_info["version"]=audio_tags.version;
