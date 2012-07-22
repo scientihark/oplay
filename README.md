@@ -1,40 +1,46 @@
-<li>现在版本：Build 2012072141 Pre Alpha V0.11</li>
+﻿<li>现在版本：Build 2012072176 Pre Alpha V0.12</li>
 
-<li>Now version：Build 2012072141 Pre Alpha V0.11</li>
+<li>Now version：Build 2012072176 Pre Alpha V0.12</li>
 =======================================================================
 <h1>简介：</h1>
 <div>
-  Oplay,是一款由HTML5+JS编写的音乐播放器，目前支持：
-	OGG音乐  （Chrome 还有MP3）
-	频谱分析
-	歌词同步
-	Win8 Metro风格界面
-	分辨率响应式（还有BUG）
-	节奏分析
-	多彩换肤
-	全屏支持
-当然，目前播放器还在Pre Alpha，因此还有很多改进空间哦~~~
-另外，由于是初学者，这个播放器90%核心由我自己编写，
-因此代码比较混乱，请多多指教。
+ Oplay,是一款由HTML5+JS编写的音乐播放器，目前支持：
+		全面支持OGG音乐  （Chrome 还有MP3）
+		兼容MP3/FLAC  AAC/ALAC(未测试)
+		频谱分析 （MP3/FLAC  AAC/ALAC时不可用）
+		歌词同步
+		Win8 Metro风格界面
+		分辨率响应式（还有BUG）
+		节奏分析 （Chrome、 MP3/FLAC  AAC/ALAC时不可用）
+		多彩换肤
+		全屏支持
+	当然，目前播放器还在Pre Alpha，因此还有很多改进空间哦
+	另外，由于是初学者，这个播放器90%核心由我自己编写，
+	因此代码比较混乱，请多多指教。
+
+	--必须使用WAMP、LAMP之类的web服务器环境测试哦
 </div>
 =======================================================================
 =======================================================================
 <h1>description：</h1>
 <div>
 Oplay,is a HTML5+JS music player，featured with：
-	OGG support  （Chrome with MP3 and ogg）
-	audio visiualizer
-	Synchronized lyrics
-	Win8 Metro UI
-	Responsive UI（Still Buging）
-	beat detektor
-	colorful skin
-	full screen support
-Ofcourse，the player is on its Pre Alpha now，
-So,its not done yet~~~
-otherwise，cause i'm a newbie and a student，About 90 percent 
-of the code is done by myself，
-So,the code is a mess，Please exhibitions。
+		Full OGG support  （Chrome with MP3 and ogg）
+		MP3/FLAC  AAC/ALAC decode support (AAC/ALAC is not tested yet)
+		audio visiualizer (not working on MP3/FLAC/AAC/ALAC)
+		Synchronized lyrics
+		Win8 Metro UI
+		Responsive UI（Still Buging）
+		beat detektor	(not working on chrome and MP3/FLAC/AAC/ALAC)
+		colorful skin
+		full screen support
+	Ofcourse，the player is on its Pre Alpha now，
+	So,its not done yet~~~
+	otherwise，cause i'm a newbie and a student，About 90 percent 
+	of the code is done by myself，
+	So,the code is a mess，Please exhibitions。
+
+	--You must use environments like WAMP or LAMP to run the test.
 </div>
 =======================================================================
 <li>**Oplay**Oplay**Oplay**Oplay**Oplay**Oplay**Oplay**Oplay**Oplay**Oplay</li>
@@ -118,6 +124,11 @@ So,the code is a mess，Please exhibitions。
 	<div>--添加ID3信息获取，现在可以从音乐中直接获取歌手、album、a
 	lbum pic等信息了（部分音乐的ID3 TAG编码问题导致中文乱码，目前暂无法解决）</div>
 
+<h2>Build 2012072176 Pre Alpha V0.12</h2>
+
+	<div>--添加FLAC/MP3/AAC/ALAC解码支持，费了老半天，用了Aurora.js实现纯JS解码播放（支持MOZ/CHROME）
+	--添加了MP3作为实例，前面几首英文歌和主题曲都是MP3的。后面魔兽世界的部分音乐用的Flac.欢迎测试。</div>
+
 						by scientihark
 ========================================================================
 ========================================================================
@@ -148,11 +159,18 @@ So,the code is a mess，Please exhibitions。
 
 	<div>--add history push ,now each song has a player history，And by clicking
 	(http:xxxxxx/index.html?4234|:|ggggg)you can play the choosed sond directly。</div>
+
 <h2>Build 2012072141 Pre Alpha V0.11</h2>
 
 	<div>--add ID3 tag information，You can now get singer album 
 	album pic and other information from the music (some of the song 
 	with special encoding can cause Chinese garbled）</div>
+
+<h2>Build 2012072176 Pre Alpha V0.12</h2>
+
+	<div>--add FLAC/MP3/AAC/ALAC decoding，It's a hard work，I used Aurora.js and get pure JS decoding（support MOZ/CHROME）
+	--add MP3 files as example，the English songs and the oplay loop are in MP3 from。some WOW stuffs are in Flac.so,go and have a try!</div>
+
 						by scientihark
 ============================================================================
 <li>**Oplay**Oplay**Oplay**Oplay**Oplay**Oplay**Oplay**Oplay**Oplay**Oplay</li>
