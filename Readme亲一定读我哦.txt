@@ -45,13 +45,13 @@ description：
 =======================================================================
 开源信息：
 
-主源码站：https://github.com/scientihark/oplay （GIT）
+主源码站：http://github.com/scientihark/oplay （GIT）
 Google Code镜像：https://code.google.com/p/oplay-scientihark/ （SVN）
 =======================================================================
 =======================================================================
 Opensource Information：
 
-main source：https://github.com/scientihark/oplay （GIT）
+main source：http://github.com/scientihark/oplay （GIT）
 Google Code mirror：https://code.google.com/p/oplay-scientihark/ （SVN）
 =======================================================================
 **Oplay**Oplay**Oplay**Oplay**Oplay**Oplay**Oplay**Oplay**Oplay**Oplay
