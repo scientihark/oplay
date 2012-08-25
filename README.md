@@ -1,6 +1,6 @@
-﻿<li>现在版本：Build 2012072176 Pre Alpha V0.12</li>
+﻿<li>现在版本：Build 2012082534 Pre Alpha V0.13</li>
 
-<li>Now version：Build 2012072176 Pre Alpha V0.12</li>
+<li>Now version：Build 2012082534 Pre Alpha V0.13</li>
 =======================================================================
 <h1>简介：</h1>
 <div>
@@ -14,6 +14,7 @@
 		节奏分析 （Chrome、 MP3/FLAC  AAC/ALAC时不可用）
 		多彩换肤
 		全屏支持
+		PHP跨域proxy支持
 	当然，目前播放器还在Pre Alpha，因此还有很多改进空间哦
 	另外，由于是初学者，这个播放器90%核心由我自己编写，
 	因此代码比较混乱，请多多指教。
@@ -34,6 +35,7 @@ Oplay,is a HTML5+JS music player，featured with：
 		beat detektor	(not working on chrome and MP3/FLAC/AAC/ALAC)
 		colorful skin
 		full screen support
+		PHP crossdomain proxy support
 	Ofcourse，the player is on its Pre Alpha now，
 	So,its not done yet~~~
 	otherwise，cause i'm a newbie and a student，About 90 percent 
@@ -129,6 +131,11 @@ Oplay,is a HTML5+JS music player，featured with：
 	<div>--添加FLAC/MP3/AAC/ALAC解码支持，费了老半天，用了Aurora.js实现纯JS解码播放（支持MOZ/CHROME）
 	--添加了MP3作为实例，前面几首英文歌和主题曲都是MP3的。后面魔兽世界的部分音乐用的Flac.欢迎测试。</div>
 
+
+<h2>Build 2012082534 Pre Alpha V0.13</h2>
+
+	<div>--添加PHP跨域支持，现在可以播放网络音乐（需要支持php）</div>
+
 						by scientihark
 ========================================================================
 ========================================================================
@@ -171,6 +178,9 @@ Oplay,is a HTML5+JS music player，featured with：
 	<div>--add FLAC/MP3/AAC/ALAC decoding，It's a hard work，I used Aurora.js and get pure JS decoding（support MOZ/CHROME）
 	--add MP3 files as example，the English songs and the oplay loop are in MP3 from。some WOW stuffs are in Flac.so,go and have a try!</div>
 
+<h2>Build 2012082534 Pre Alpha V0.13</h2>
+
+	<div>--add PHP crossdomain proxy support，now you can play music on other site.（need php）</div>
 						by scientihark
 ============================================================================
 <li>**Oplay**Oplay**Oplay**Oplay**Oplay**Oplay**Oplay**Oplay**Oplay**Oplay</li>
@@ -212,7 +222,6 @@ Oplay,is a HTML5+JS music player，featured with：
 <h2>safari:</h2>
 	<div>我的safari挂了，木有测.不过webkit应该和chrome差不多</div>
 
-<div>目前有纯js的mp3,flac,alac,aac,wav解码器，但是太复杂，暂时木有用。</div>
 ===========================================================================
 ============================================================================
 <h1>Currently known：</h1>
@@ -256,6 +265,4 @@ With the W3c Audio standard still setting（those api may be really low-layer）
 
 <h2>safari:</h2>
 	<div>my safari crashed，so I haven't test yet.but I think it may be same as chrome</div>
-
-<div>Now there are mp3,flac,alac,aac,wav decoder in pure javascript ，but it's a little difficult。</div>
 ===========================================================================

@@ -1,5 +1,6 @@
-$version="pre Alpha v0.12";
-$version_b="Build 2012072176";
+﻿$version="pre Alpha v0.13";
+$version_b="Build 2012082534";
+$use_pro=0;
 $nowplay=0;
 $now_lst_page=1;
 $total_lst_page=1;
@@ -26,7 +27,7 @@ $isfullscreen=0;
 $fftstyle=0;
 $webkitloaded=1;
 $now_audio_type="ogg";
-$baseurl="http://localhost/oplay_0.1_pre/index.html";
+$baseurl="http://localhost:8081/oplay-git/index.html";
 $audio_decoder=0;
 onplay=0;
 $decoder_dure=0;
@@ -34,6 +35,8 @@ $decoder_buff=0;
 $audio_decoder_info=0;
 $btncheck_pre_over=0;
 $btncheck_next_over=0;
+$lfulltime=0;
+$trr_next=0;
 function autocontsrc(){
 	var $i=1;
 	while($playlist[$i]&&$playlist[$i]['src']){
@@ -123,6 +126,14 @@ function  music_type_dect(ipt){
 		if(ta[1]){
 			return ta[1].toUpperCase();
 		}else{
+			var ta=ipt.split(".");
+			var $t=1;
+			while(ta[$t]){
+				if(ta[$t].toUpperCase()=="MP3"||ta[$t].toUpperCase()=="OGG"||ta[$t].toUpperCase()=="FLAC"||ta[$t].toUpperCase()=="AAC"||ta[$t].toUpperCase()=="ALAC"){
+					return ta[$t].toUpperCase();
+				}
+				$t++;
+			}
 			return "NULL";
 		}
 	}else{
@@ -132,6 +143,21 @@ function  music_type_dect(ipt){
 		}else{
 			return "NULL";
 		}
+	}
+}
+function  music_pro_dect(ipt){
+	var cc=ipt.split("/");
+	if((cc[0].toUpperCase()=="HTTP:")||(cc[0].toUpperCase()=="FTP:")){
+		switch(cc[2]){
+			case "localhost":
+				$use_pro=0;
+				return ipt;
+			default:
+				$use_pro=1;
+				return "api/proxy.php?url="+ipt;
+		}
+	}else{
+		return ipt;
 	}
 }
 /*  

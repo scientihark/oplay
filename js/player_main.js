@@ -1,6 +1,11 @@
 player_inti_a();
 function player_inti_a(){
 	console.log("Oplay-inti: Oplay-开放视界，聆听生活-"+$version+" "+$version_b);
+	document.body.addEventListener("mouseover",full_screen,false);
+	var yyy=function(){
+		document.body.removeEventListener("mouseover",full_screen,false);
+	}
+	setTimeout(yyy,1000);
 	document.title="Oplay-开放视界，聆听生活-"+$version+" "+$version_b;
 	if (!window.Audio || !('mozWriteAudio' in new Audio()) && !window.AudioContext && !window.webkitAudioContext) {
     	unsupported = true;
@@ -306,14 +311,14 @@ function player_play(id){
 	history.pushState($state,$state['tittle'],$state['url']);
 	document.title=$state['tittle'];
 	console.log(tt);
-	get_audio_info(nowurl,id);
+	get_audio_info(music_pro_dect(nowurl),id);
 	clearfft();
 	
 	$now_audio_type=music_type_dect(nowurl);
 	console.log($now_audio_type);
 	$goplay=0;
 	
-	play(nowurl);
+	play(music_pro_dect(nowurl));
 	var caat=read_lrc(id);
 	if(caat==1||caat==-1){
 		$now_lrc=-1;
@@ -360,7 +365,8 @@ function play(url){
 	}else if($now_audio_type=="OGG"){
 		play_ogg(url);
 	}else if(($now_audio_type=="MP3")||($now_audio_type=="AAC")||($now_audio_type=="FLAC")||($now_audio_type=="ALAC")){
-		play_mp3_flac_aac_alac(url);
+		
+		play_pro_fix(url)
 	}
 }
 function play_mp3_flac_aac_alac(url){
@@ -387,6 +393,16 @@ function play_ogg(url){
 		  $webkitloaded=1;
 	}
 }
+function play_pro_fix(file){
+	var ttr=function(){play_mp3_flac_aac_alac(file);};
+	if($use_pro==1){
+		jQuery.get(file);
+		setTimeout(ttr,100);
+	}else{
+		setTimeout(ttr,100);
+	}
+}
+	 
 function get_audio_info(url,id){
 	 $audio_file=url;
 	 //read_audio_info();
@@ -467,29 +483,38 @@ function player_times(dc_t){
 		}
 	}
 	}
+	if(fulltime!=0&&nowtime>=20&&nowtime<=30){
+		$trr_next=0;
+	}
 	if($now_audio_type=="OGG"){
 		if((nowtime!=0)&&(nowtime==fulltime)){
+			$play_pro_fixed=0;
 			play_end();
 			return;
 		}
-	}else if($now_audio_type=="FLAC"){
-		if((nowtime!=0)&&(nowtime==fulltime)&&($audio_decoder_info.buffered>=100)){
-			setTimeout(check_play_end,3000);
-			return;
+	}else{
+		if(fulltime==360){
+			if((nowtime>10)&&(nowtime<fulltime)&&($audio_decoder_info.buffered==100)){
+				setTimeout(check_play_end,1000);
+				return;
+			}
+		}else{
+			if((nowtime!=0)&&(nowtime==fulltime)&&($audio_decoder_info.buffered==100)){
+				setTimeout(check_play_end,3000);
+				return;
+			}
 		}
-	}else if(fulltime==360){
-		if((nowtime!=0)&&(nowtime==fulltime)&&($audio_decoder_info.buffered>=20)){
-			setTimeout(check_play_end,1000);
-			return;
-		}
+		
 	}
 }
 function check_play_end(){
-	if(($audio_decoder_info.playing==false)&&($ispaused==0)){
+	if(($audio_decoder_info.playing==false)&&($ispaused==0)&&($trr_next==0)){
+		$trr_next=1;
 		play_end();
 	}
 }
 function play_end(){
+	$lfulltime=0;
 	$isstoped=1;
 	player_album_pic("none");
 		if($play_loop==0){//无循环

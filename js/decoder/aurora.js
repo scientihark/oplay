@@ -1561,7 +1561,9 @@ HTTPSource = (function(_super) {
     this.xhr.open("GET", this.url, true);
     this.xhr.responseType = "arraybuffer";
     endPos = Math.min(this.offset + this.chunkSize, this.length);
-    this.xhr.setRequestHeader("Range", "bytes=" + this.offset + "-" + endPos);
+	if($use_pro==0){
+    	this.xhr.setRequestHeader("Range", "bytes=" + this.offset + "-" + endPos);
+	}
     this.xhr.overrideMimeType('text/plain; charset=x-user-defined');
     return this.xhr.send(null);
   };
